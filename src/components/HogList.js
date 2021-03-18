@@ -1,11 +1,16 @@
 import Tile from "./Tile";
 
 function HogList({hogArray}){
-const filteredHog = hogArray.map((hog)=> {
-return hog.name, hog.image
+    const filteredHog = hogArray.map((hog) => {
+        return <Tile name={hog.name} weight={hog.weight} specialty={hog.specialty} greased={hog.greased}/>
+       
 
-})
-return(<Tile/>)
+    });
+
+console.log(filteredHog)
+return(
+<div> {filteredHog}</div>
+)
 
 
 
